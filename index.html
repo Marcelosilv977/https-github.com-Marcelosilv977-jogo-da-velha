@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <div id="login">
+        <div class="login-box">
+            <h1 class="titulo">🎮 Jogo da Velha 🎮</h1>
+            <div class="campo">
+                <label>Jogador 1 (X): </label>
+                <input type="text" id="jogador1" placeholder="Nome do Jogador 1">
+                <select id="genero1">
+                    <option value="menino">Masculino</option>
+                    <option value="menina">Feminino</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label>Jogador 2 (O): </label>
+                <input type="text" id="jogador2" placeholder="Nome do Jogador 2">
+                <select id="genero2">
+                    <option value="menino">Masculino</option>
+                    <option value="menina">Feminino</option>
+                    <option value="cpu">Computador</option>
+                </select>
+            </div>
+            <button id="iniciar">Iniciar</button>
+        </div>
+    </div>
+
+    <div id="jogo" style="display:none;">
+        <h1 class="titulo">🎮 Jogo da Velha 🎮</h1>
+
+        <div id="placar">
+            <h2 class="placar-titulo">🏆 Placar 🏆</h2>
+            <table>
+                <tr>
+                    <th id="nomePlacar1">Jogador 1</th>
+                    <th id="nomePlacar2">Jogador 2</th>
+                </tr>
+                <tr>
+                    <td id="vitorias1">0</td>
+                    <td id="vitorias2">0</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="cronometro">⏱️ Tempo: 00:00</div>
+
+        <div id="painel-jogadores">
+            <div class="painel painel1">
+                <img id="avatar1" src="" alt="Jogador 1">
+                <p id="nome1"></p>
+            </div>
+            <div id="tabuleiro">
+                <div class="celula" data-index="0"></div>
+                <div class="celula" data-index="1"></div>
+                <div class="celula" data-index="2"></div>
+                <div class="celula" data-index="3"></div>
+                <div class="celula" data-index="4"></div>
+                <div class="celula" data-index="5"></div>
+                <div class="celula" data-index="6"></div>
+                <div class="celula" data-index="7"></div>
+                <div class="celula" data-index="8"></div>
+            </div>
+            <div class="painel painel2">
+                <img id="avatar2" src="" alt="Jogador 2">
+                <p id="nome2"></p>
+            </div>
+        </div>
+
+        <p id="mensagem"></p>
+
+        <div id="botoes-jogo">
+            <button id="reiniciar">Reiniciar</button>
+            <button id="voltar">Voltar</button>
+        </div>
+    </div>
+
+    <audio id="somJogada" src="ASSETS/jogada.mp3"></audio>
+    <audio id="somVitoria" src="ASSETS/vitoria.mp3"></audio>
+    <audio id="somEmpate" src="ASSETS/empate.mp3"></audio>
+    <audio id="somTick" src="ASSETS/tick.mp3"></audio>
+
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
